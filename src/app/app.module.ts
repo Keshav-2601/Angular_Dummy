@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import {HelpPageComponent}from './help-page/help-page.component';
 import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     MatInputModule,
     BrowserAnimationsModule,
+    MatButtonModule,
     RouterModule.forRoot([
       {path:'Contact',component:ContactComponent},
       {path:'Mainpage',component: MainpageComponent},
