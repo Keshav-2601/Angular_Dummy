@@ -1,0 +1,54 @@
+
+/* General Navbar Styling */
+nav {
+    background: linear-gradient(to right, #141E30, #243B55); /* Gradient background */
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center; /* Centers the links */
+    align-items: center;
+    position: fixed; /* Fixes navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  /* Navbar Links */
+  nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hover Effect */
+  nav a:hover {
+    color: #FFD700; /* Gold hover color */
+    transform: translateY(-3px); /* Lifts the text slightly */
+  }
+  
+  /* Active Link */
+  nav a.router-link-active {
+    color: #FFD700;
+    font-weight: bold;
+    border-bottom: 2px solid #FFD700;
+  }
+  
+  /* Responsive Navbar */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      height: auto;
+    }
+    
+    nav a {
+      padding: 8px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  

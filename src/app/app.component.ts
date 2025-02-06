@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
-
+import { FormsModule } from '@angular/forms'; // ✅ Import FormsModule
+import { NgFor } from '@angular/common';
+import { RouterModule} from '@angular/router';
 @Component({
   selector: 'app-root',
-  imports: [],
+  standalone: true, 
+  imports: [FormsModule,RouterModule], 
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ang-practice-forms';
+  
 }

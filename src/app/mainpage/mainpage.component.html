@@ -1,0 +1,30 @@
+<form [formGroup]="form">
+   <mat-form-field>
+      <mat-label>Username</mat-label>
+      <input formControlName="username" matInput type="text">
+      <mat-error>
+         <div class="diverror" *ngIf="form.get('username')?.touched && form.get('username')?.errors?.['required']">
+            Username
+            is required</div>
+      </mat-error>
+
+      <mat-error>
+         <div class="diverror"
+            *ngIf="form.get('username')?.touched && !form.get('username')?.errors?.['required'] && form.get('username')?.errors?.['minlength']">
+            Min length should be 3</div>
+
+      </mat-error>
+      <mat-error>
+         <div class="diverror"
+            *ngIf="form.get('username')?.touched && !form.get('username')?.errors?.['required']  && form.get('username')?.errors?.['maxlength']">
+            Max length can be 25</div>
+      </mat-error>
+
+      <mat-label>Email</mat-label>
+      <input formControlName="email" matInput type="text" />
+      <mat-label>Address</mat-label>
+      <input formControlName="address" matInput type="text" />
+      <mat-label>Password</mat-label>
+      <input formControlName="password" type="password" />
+   </mat-form-field>
+</form>
