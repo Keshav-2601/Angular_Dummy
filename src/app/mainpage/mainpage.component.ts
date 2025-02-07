@@ -15,7 +15,7 @@ export class MainpageComponent {
   
   form= new FormGroup({
     username:new FormControl('',[Validators.required,Validators.minLength(3),Validators.maxLength(25)]),
-    email:new FormControl('abc@gmail.com'),
+    email:new FormControl(''),
     address:new FormControl(''),
     password:new FormControl('',[Validators.required])
     ,

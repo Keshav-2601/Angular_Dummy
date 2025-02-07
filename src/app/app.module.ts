@@ -10,6 +10,7 @@ import {HelpPageComponent}from './help-page/help-page.component';
 import {MatInputModule} from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   imports: [
@@ -19,6 +20,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatInputModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatCardModule,
     RouterModule.forRoot([
       {path:'Contact',component:ContactComponent},
       {path:'Mainpage',component: MainpageComponent},
