@@ -1,33 +1,32 @@
-<form [formGroup]="form" class="form-container">
+<form [formGroup]="form" class="form-container" (ngSubmit)="onSubmit()">
    <mat-form-field appearance="fill">
-      <mat-label>Username</mat-label>
-      <input formControlName="username"  matInput type="text">
-      <mat-error *ngIf="form.get('username')?.touched && form.get('username')?.errors?.['required']">
-         Username is required
-      </mat-error>
-      <mat-error *ngIf="form.get('username')?.touched && form.get('username')?.errors?.['minlength']">
-         Min length should be 3
-      </mat-error>
-      <mat-error *ngIf="form.get('username')?.touched && form.get('username')?.errors?.['maxlength']">
-         Max length can be 25
-      </mat-error>
+     <mat-label>Username</mat-label>
+     <input matInput formControlName="username" placeholder="Enter your username" >
+     <mat-error *ngIf="username?.touched && username?.errors?.['required']">Username is required</mat-error>
+     <mat-error *ngIf="username?.touched && username?.errors?.['minlength']">Must be at least 3 characters</mat-error>
+     <mat-error *ngIf="username?.touched && username?.errors?.['maxlength']">Max 20 characters allowed</mat-error>
+   </mat-form-field>
+ 
+   <mat-form-field appearance="fill">
+     <mat-label>Email</mat-label>
+     <input matInput formControlName="email" placeholder="Enter your email" >
+     <mat-error *ngIf="email?.touched && email?.errors?.['required']">Email is required</mat-error>
+     <mat-error *ngIf="email?.touched && email?.errors?.['email']">Invalid email format</mat-error>
    </mat-form-field>
 
    <mat-form-field appearance="fill">
-      <mat-label>Email</mat-label>
-      <input formControlName="email" matInput type="email">
-   </mat-form-field>
-
+    <mat-label><address></address></mat-label>
+    <input matInput formControlName="email" placeholder="Enter your address">
+    <mat-error *ngIf="email?.touched && email?.errors?.['maxlength']">Address is too long</mat-error>
+  </mat-form-field>
+ 
    <mat-form-field appearance="fill">
-      <mat-label>Address</mat-label>
-      <input formControlName="address" matInput type="text">
+     <mat-label>Password</mat-label>
+     <input matInput type="password" formControlName="password" placeholder="Enter your password" >
+     <mat-error *ngIf="password?.touched && password?.errors?.['required']">Password is required</mat-error>
+     <mat-error *ngIf="password?.touched && password?.errors?.['minlength']">Minimum 6 characters required</mat-error>
    </mat-form-field>
-
-   <mat-form-field appearance="fill">
-      <mat-label>Password</mat-label>
-      <input formControlName="password" matInput type="password">
-   </mat-form-field>
-   <div class="button-container ">
-      <button mat-flat-button color="primary">Submit</button>
-   </div>
-</form>
+ 
+   <button mat-raised-button color="primary" type="submit"  >Submit</button>
+ </form> 
+ 

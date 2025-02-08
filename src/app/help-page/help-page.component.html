@@ -1,14 +1,5 @@
-<div *ngFor="let help of helpline_data ">
-    <ul>
-        <li>
-            {{help.Category}}
-        </li>
-        <li>
-            {{help.Number}}
-        </li>
-        <li>
-
-            {{help.Country}}
-        </li>
-    </ul>
-</div>
+<div *ngFor="let help of helpline_data">
+    <h3>{{ help.name }}</h3>
+    <p>Contact: {{ help.phone }}</p>
+  </div>
+  
